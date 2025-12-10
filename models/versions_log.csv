@@ -1,0 +1,2 @@
+filename,algorithm,version,auc,accuracy,precision,recall,f1,timestamp,notes
+model_lgbm_v1.pkl,lgbm,v1,0.984604531271198,0.9407699901283317,0.7568922305764411,0.9292307692307692,0.8342541436464088,2025-12-08T18:52:59.289333,12-feature baseline with class_weight='balanced'
