@@ -1,9 +1,21 @@
+# -----------------------------
+# ✅ Dependências do app de deploy
+# -----------------------------
+
+# App web
 streamlit==1.40.1
+
+# Dados
 pandas==2.2.2
 numpy==1.26.4
-scikit-learn==1.6.1
-lightgbm==4.5.0
 joblib==1.4.2
-plotly==5.24.1
 
+# Modelos usados no .pkl
+xgboost==2.0.3
+lightgbm==4.3.0
 
+# Visualização
+plotly==5.22.0
+
+# Opcional (import SHAP só se você usar explicações ao vivo)
+shap==0.45.1
