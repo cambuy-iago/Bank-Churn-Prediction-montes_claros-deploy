@@ -26,10 +26,10 @@ def setup_paths():
         project_root = current_file.parent.parent.parent
     
     # Fallback: Caminho absoluto baseado na sua estrutura
-    if not (project_root / "data").exists():
-        fallback_path = Path(r"C:\Users\Iago\OneDrive\Desktop\Projeto Churn\Bank-Churn-Prediction-montes_claros")
-        if fallback_path.exists():
-            project_root = fallback_path
+    # if not (project_root / "data").exists():
+        # fallback_path = Path(r"C:\Users\Iago\OneDrive\Desktop\Projeto Churn\Bank-Churn-Prediction-montes_claros")
+        # if fallback_path.exists():
+        #     project_root = fallback_path
     
     # Caminhos principais
     MODEL_PATH = project_root / "models" / "model_final.pkl"
@@ -675,13 +675,14 @@ elif aba.startswith("📈"):
             col1, col2 = st.columns([2, 1])
             
             with col1:
-                st.dataframe(
-                    metrics_df.style.highlight_max(
-                        subset=["roc_auc_mean", "accuracy_mean", "f1_mean"],
-                        color="#c6efce",
-                    ),
-                    width='stretch'
-                )
+                st.dataframe(metrics_df)
+                # st.dataframe(
+                #     metrics_df.style.highlight_max(
+                #         subset=["roc_auc_mean", "accuracy_mean", "f1_mean"],
+                #         color="#c6efce",
+                #     ),
+                #     width='stretch'
+                # )
             
             with col2:
                 st.info("""
@@ -696,6 +697,7 @@ elif aba.startswith("📈"):
                 ✅ Interpretável via SHAP
                 """)
         except Exception as e:
+            raise e
             st.warning(f"Não foi possível carregar métricas: {str(e)}")
 
     st.markdown("---")
