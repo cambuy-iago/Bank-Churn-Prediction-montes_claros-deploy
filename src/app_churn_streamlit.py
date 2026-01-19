@@ -224,13 +224,16 @@ def criar_variaveis_derivadas_fallback(df):
     
     return df
 
-# Tenta importar a função original, usa fallback se falhar
-try:
-    from src.features import criar_variaveis_derivadas
-    criar_variaveis_derivadas_wrapper = criar_variaveis_derivadas
-except ImportError:
-    st.sidebar.warning("⚠️ Usando função de fallback para criar_variáveis_derivadas")
-    criar_variaveis_derivadas_wrapper = criar_variaveis_derivadas_fallback
+# # Tenta importar a função original, usa fallback se falhar
+# try:
+#     from src.features import criar_variaveis_derivadas
+#     criar_variaveis_derivadas_wrapper = criar_variaveis_derivadas
+# except ImportError:
+#     st.sidebar.warning("⚠️ Usando função de fallback para criar_variáveis_derivadas")
+#     criar_variaveis_derivadas_wrapper = criar_variaveis_derivadas_fallback
+
+# Deploy version: keep app standalone
+criar_variaveis_derivadas_wrapper = criar_variaveis_derivadas_fallback
 
 # -----------------------------------------------------------
 # CARREGAMENTO DE DADOS
