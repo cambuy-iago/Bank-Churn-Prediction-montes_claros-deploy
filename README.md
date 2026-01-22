@@ -1,4 +1,4 @@
-# 🏦 Predição de Churn em Cartões de Crédito – Banco Mercantil (Projeto Aplicado MBA)
+# 🏦 Predição de Churn em Cartões de Crédito –  (Projeto Aplicado MBA)
 
 Este repositório contém o desenvolvimento completo de um **sistema de predição de churn de clientes de cartão de crédito**, utilizando **Machine Learning (LightGBM)** e um **webapp interativo em Streamlit** para suporte às áreas de **CRM, Risco e Negócios**.
 
